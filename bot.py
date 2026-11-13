@@ -1,13 +1,11 @@
+import os
 import asyncio
-import logging
 from aiogram import Bot, Dispatcher, F, Router
 from aiogram.filters import CommandStart
 from aiogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-# 🔑 Вставь сюда свой токен в кавычках вместо "9094780819:AAF4vQm8yxqIXYfvGI8y3fgJUPbq-J0SH1I"
-import os
-TOKEN = os.getenv("9094780819:AAF4vQm8yxqIXYfvGI8y3fgJUPbq-J0SH1I")
-
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+bot = Bot(token=BOT_TOKEN)
 router = Router()
 
 # ==========================================
@@ -273,7 +271,7 @@ async def process_back_main(callback: CallbackQuery):
 
 async def main():
   logging.basicConfig(level=logging.INFO)
-  bot = Bot(token=TOKEN)
+  bot = Bot(token=BOT TOKEN)
   dp = Dispatcher()
   dp.include_router(router)
 
