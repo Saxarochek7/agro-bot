@@ -271,7 +271,7 @@ async def process_back_main(callback: CallbackQuery):
 
 async def main():
   logging.basicConfig(level=logging.INFO)
-  bot = Bot(token=BOT TOKEN)
+  bot = Bot(token=BOT_TOKEN)
   dp = Dispatcher()
   dp.include_router(router)
 
